@@ -526,7 +526,7 @@ footer {
 
 @media screen and (max-width: 481px) {
     nav ul li a {
-        font-size: 12px;
+        font-size: 19px;
     }
 
     header button {
@@ -534,9 +534,8 @@ footer {
     }
     .nav-links {
         list-style: none;
-        display: flexbox;
+        display: inline;
         padding-bottom: 6px;
-        justify-content: flex-end;
         
     }
 
