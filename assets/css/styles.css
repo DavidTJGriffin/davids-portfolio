@@ -3,8 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    overflow: hidden;
-    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 
@@ -16,6 +15,7 @@ main {
     background-color: #1A242E;
     background: linear-gradient(180deg, #1A242E 80%, #252934 60%);
     padding-top: 60px;
+    overflow: hidden;
 }
 
 li {
@@ -35,7 +35,6 @@ li {
     width: 100vw;
     /* Full width */
     z-index: 9999;
-margin-right: 15px;
 }
 
 .navbar a:active {
