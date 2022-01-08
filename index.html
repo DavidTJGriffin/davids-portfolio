@@ -16,14 +16,11 @@
 <body>
     <header>
         <!-- navigation -->
-        <div>
+        <div class="name">
             <h1 class="logo"><a class="logo" href="#">David</a></h1>
         </div>
-                			<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-			<!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-				<img class="hamburger" src="./assets/images/hamburger-icon.png" />
-			</a> -->
-        <nav>
+
+        <nav id="links">
             <ul>
                 <li class="nav-links"><a href="#about">ABOUT</a></li>
                 <li class="nav-links"><a href="#work-container">WORK</a></li>
@@ -31,7 +28,10 @@
             </ul>
             <a class="cta" href="#"><button>RESUME</button></a>
         </nav>
-
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <img class="hamburger" src="./assets/images/hamburger-icon.png" />
+        </a>
+        </a>
     </header>
     <main>
         <!-- hero -->
@@ -157,7 +157,18 @@
         </div>
     </section>
     <footer>
-        
+
     </footer>
+    <script>
+		function myFunction() {
+			var x = document.getElementById("links");
+			if (x.style.display === "flexbox") {
+				x.style.display = "none";
+			} else {
+				x.style.display = "block";
+			}
+		}
+		</script>
 </body>
+
 </html>

@@ -16,6 +16,8 @@ main {
     background: linear-gradient(180deg, #1A242E 50%, #252934 50%);
 }
 
+
+
 /* Buttons */
 nav li a, .logo {
     font-weight: 500;
@@ -58,6 +60,9 @@ header {
     padding: 0px 20px;
     font-size 5px;
 }
+#links {
+    display: flexbox;
+}
 nav ul li a {
     font-size: 17px;
 }
@@ -82,6 +87,9 @@ header button:hover {
     background-color: #51687E;
 }
 
+.icon {
+	display: none;
+}
 
 .title {
     color: white;
@@ -376,6 +384,7 @@ footer {
     .small-projects {
         min-width: 400px flex-grow: 1;
     }
+    
 
     #led-wall {
         background-image: url("../images/led-wall-project.jpg");
@@ -452,25 +461,64 @@ footer {
         text-align: center;
         margin: 48px;
     }
+
     header {
-       
-        background-color: #1A242E;
-        position:static;
-
+		height: auto;
+		flex-direction: column;
+		align-items: flex-start;
+        height: 45px;
+        background-color: #1F6ED9;
+        position: static;
+        display: flex;
+	}
+	
+	header nav {
+		display: none;
+		flex-direction: column;
+	}
+	
+	header ul {
+		padding: 0;
+		margin-right: 0;
+		flex-direction: column;
+		align-items: flex-start;
+        
+	}
+	
+	header ul li {
+		padding-bottom: 2px;
+	}
+	
+    #links {
+        flex-direction: column;
     }
-
-    #bio-info {
-        justify-content: center;
-
-    }
-    .hero {
-        display: flexbox;
-        background-color: #C0CAD8;
-        padding: 5px 30px 5px 30px;
-        flex-wrap: wrap;
-        font-size: 22px;
-    }
-    
+	.name {
+		height: 45px;
+	}
+	
+	.name h1 {
+		width: 90vw;
+	}
+	
+	.icon {
+		height: 45px;
+	
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	
+	.hamburger {
+		width: 45px;
+		height: 45px;
+	}
+	
+	.icon:hover {
+		background-color: transparent;
+		color: black;
+	}
+	
     #david-picture {
         margin-left: auto;
         margin-right: auto;
@@ -496,17 +544,7 @@ footer {
         padding-bottom: 48px;
     }
 
-    header {
-        display: flexbox;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 22px 0 0;
-        position: sticky;
-        position: -webkit-sticky;
-        top: 0;
-        z-index: 9999;
-        background-color: #1A242E;
-    }
+   
 
     .logo {
         font-size: 20px;
