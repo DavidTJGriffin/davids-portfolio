@@ -215,10 +215,10 @@ main button {
 }
 
 #bio-info {
-    width: 80vw;
+    width: 65vw;
     min-height: 300px;
     margin-left: 10px;
-    text-align-last: ce;
+    line-height: 1.5;
 }
 
 .logo-img {
