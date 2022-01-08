@@ -61,7 +61,7 @@ header {
     font-size 5px;
 }
 #links {
-    display: flexbox;
+    display: flex;
 }
 nav ul li a {
     font-size: 17px;
@@ -525,7 +525,9 @@ footer {
         max-width: 70vw;
         object-fit: contain;
     }
-
+#links {
+    display: none;
+}
     #about {
         margin-left: 20px;
     }
