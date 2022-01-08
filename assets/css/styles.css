@@ -31,7 +31,7 @@ li {
     /* Set the navbar to fixed position */
     top: 0;
     /* Position the navbar at the top of the page */
-    width: 100%;
+    width: 100vw;
     /* Full width */
     z-index: 9999;
     
@@ -89,7 +89,7 @@ li {
         top: 3rem;
         flex-direction: column;
         background-color: #1A242E;
-        width: 100%;
+        width: 100vw;
         border-radius: 10px;
         text-align: center;
         transition: 0.3s;
@@ -159,7 +159,6 @@ button {
 
 main {
     display: flex;
-    min-width: 453px;
 
 }
 
