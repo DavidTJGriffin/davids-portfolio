@@ -14,24 +14,29 @@
 </head>
 
 <body>
-    <header>
-        <!-- navigation -->
-        <div class="name">
-            <h1 class="logo"><a class="logo" href="#">David</a></h1>
-        </div>
-
-        <nav id="links">
-            <ul>
-                <li class="nav-links"><a href="#about">ABOUT</a></li>
-                <li class="nav-links"><a href="#work-container">WORK</a></li>
-                <li class="nav-links"><a href="#contact"> CONTACT</a></li>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="nav-logo">David</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#work-container" class="nav-link">Work</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Resume</a>
+                </li>
             </ul>
-            <a class="cta" href="#"><button>RESUME</button></a>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <img class="hamburger" src="./assets/images/hamburger-icon.png" />
-        </a>
-        </a>
     </header>
     <main>
         <!-- hero -->
@@ -157,15 +162,24 @@
 
     </footer>
     <script>
-		function myFunction() {
-			var x = document.getElementById("links");
-			if (x.style.display === "flex") {
-				x.style.display = "none";
-			} else {
-				x.style.display = "block";
-			}
-		}
-		</script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+    </script>
 </body>
 
 </html>
