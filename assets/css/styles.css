@@ -58,8 +58,9 @@ header {
     list-style: none;
     display: inline-block;
     padding: 0px 20px;
-    font-size 5px;
+    
 }
+
 #links {
     display: flex;
 }
@@ -382,7 +383,8 @@ footer {
     }
 
     .small-projects {
-        min-width: 400px flex-grow: 1;
+        min-width: 400px; 
+        flex-grow: 1;
     }
     
 
