@@ -18,6 +18,23 @@ main {
     overflow: hidden;
 }
 
+.blinking-underscore {
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
 li {
     list-style: none;
 }
@@ -89,47 +106,7 @@ li {
     padding-right: 31px;
 }
 
-@media only screen and (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 3rem;
-        flex-direction: column;
-        background-color: #1A242E;
-        width: 100vw;
-        border-radius: 10px;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow:
-            0 10px 27px rgba(0, 0, 0, 0.05);
-    }
 
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-item {
-        margin: 2.5rem 0;
-    }
-
-    .hamburger {
-        display: block;
-        cursor: pointer;
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-}
 
 /* Buttons */
 nav li a, .logo {
@@ -185,14 +162,19 @@ main button {
 .hero {
     display: flex;
     background-color: #C0CAD8;
-    padding: 5px 30px 5px 30px;
+    padding: 5px 10px 5px 10px;
     flex-wrap: wrap;
     top: 36px;
     margin: 0;
+    justify-content: left;
+    font-size: 4vw;
+    width: fit-content;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 #hero {
-    border-radius: 17px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -200,7 +182,7 @@ main button {
     position: relative;
     margin-top: 30px;
     margin-bottom: 30px;
-    box-shadow: 0 1px 6px 0 rgb(0 0 0 / 40%);
+    box-shadow: 0 1px 6px 0 rgb(0 0 0 / 90%);
 }
 
 .david {
@@ -218,8 +200,7 @@ main button {
 
 /* About Section */
 #about {
-
-    padding-top: 44px;
+    padding-top: 50px;
     margin-left: 103px;
     border-left: solid 3px #C0CAD8;
     padding-left: 15px;
@@ -266,7 +247,7 @@ main button {
 .projects {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 44px;
+    padding-top: 50px;
     margin-left: 136px;
     border-left: solid 3px #C0CAD8;
     padding-left: 15px;
@@ -373,7 +354,7 @@ h3 {
 /* Contact Section */
 
 #contact {
-    padding-top: 44px;
+    padding-top: 50px;
     margin-left: 169px;
     border-left: solid 3px #C0CAD8;
     padding-left: 15px;
@@ -405,7 +386,7 @@ footer {
     .projects {
         display: flex;
         flex-wrap: wrap;
-        padding-top: 44px;
+        padding-top: 50px;
         margin-left: 111px;
         border-left: solid 3px #C0CAD8;
         padding-left: 15px;
@@ -447,6 +428,50 @@ footer {
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 3rem;
+        flex-direction: column;
+        background-color: #1A242E;
+        width: 100vw;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+        z-index: 9999;
+    }
+
+    .navbar {
+        position: static;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
     .projects {
         display: block;
         flex-wrap: nowrap;
@@ -479,20 +504,27 @@ footer {
     }
 
     #about {
+        margin-top: 20px;
         margin-left: 35px;
+        padding-top: 0px;
     }
 
     .projects {
         display: flex;
         flex-wrap: wrap;
-        padding-top: 44px;
+        padding-top: 0px;
         margin-left: 55px;
         border-left: solid 3px #C0CAD8;
         padding-left: 15px;
     }
 
+    main {
+        padding-top: 0px;
+    }
+
     #contact {
         margin-left: 75px;
+        padding-top: 0px;
     }
 
     footer {
@@ -507,10 +539,27 @@ footer {
     #about {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: left;
         vertical-align: top;
-        text-align: center;
-        margin: 48px;
+        margin-left: 20px;
+    }
+#bio-info {
+    text-align: center;
+    margin-top: 10px;
+}
+    .hero {
+        display: flex;
+        background-color: #C0CAD8;
+        padding: 5px 10px 5px 10px;
+        flex-wrap: wrap;
+        top: 36px;
+        margin: 0;
+        justify-content: left;
+        font-size: 5.2vw;
+        width: fit-content;
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
     }
 
     .name {
@@ -538,14 +587,10 @@ footer {
         object-fit: contain;
     }
 
-    #about {
-        margin-left: 20px;
-    }
-
     .projects {
         display: flex;
         flex-wrap: wrap;
-        padding-top: 44px;
+        padding-top: 0px;
         margin-left: 35px;
         border-left: solid 3px #C0CAD8;
         padding-left: 15px;
