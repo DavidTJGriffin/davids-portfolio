@@ -138,6 +138,10 @@ button {
 .title {
     color: white;
 }
+.title-name {
+    color: white;
+    font-size: 32px;
+}
 
 /* Hero Section */
 
@@ -189,7 +193,7 @@ main button {
     color: #1F6ED9;
     background-color: #C0CAD8;
     font-weight: 600;
-    padding-left: 9px;
+    padding-left: 6px;
 }
 
 .description {
