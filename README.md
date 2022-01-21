@@ -7,7 +7,7 @@
 - [Credits](#credits)
 - [License](#license)
 ## Installation
-Open the link: https://ukarimu1.github.io/portfolio/
+Open the link: https://DavidTJGriffin.github.io/davids-portfolio/
 ## Usage
 Navigate the my portfolio site and view information about me, my projects, contact information, or my resume.
 
